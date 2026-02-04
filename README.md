@@ -27,3 +27,9 @@
 ## 파일 구성
 - 2주2일차.ipynb : 데이터 분석 코드 ( 이외 .ipynb는 seaborn이나 pandas 데이터셋을 이용한 시각화 실습 )
 - README.md : 프로젝트 설명
+
+<img width="1984" height="684" alt="다운로드 (4)" src="https://github.com/user-attachments/assets/bde38150-506f-46a4-9be5-1d9d77a943b0" />
+<img width="1784" height="784" alt="다운로드" src="https://github.com/user-attachments/assets/da8ad517-b408-44f8-afb8-c267bc337baa" />
+<img width="1385" height="784" alt="다운로드 (3)" src="https://github.com/user-attachments/assets/7140a6d1-6618-4420-91cc-5eb48747ad3d" />
+<img width="1469" height="1184" alt="다운로드 (2)" src="https://github.com/user-attachments/assets/989f7d4c-0408-4c49-8ba5-7b4a37675bad" />
+<img width="1484" height="684" alt="다운로드 (1)" src="https://github.com/user-attachments/assets/2b574b67-0d74-4f31-9cbc-d1b03c6bd3b0" />
