@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mat Foot Pressure Dataset</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #7f8c8d;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .code {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e7f3ff;
+            color: #0066cc;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.9em;
+            margin: 2px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin: 8px 0;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Mat Foot Pressure Dataset</h1>
+        <p><em>스마트매트 족압 측정 데이터셋</em></p>
+
+        <div class="section">
+            <h2>1. Dataset Characteristics</h2>
+            <table>
+                <tr>
+                    <td><strong>Data Set Characteristics:</strong></td>
+                    <td>Multivariate, Time-Series</td>
+                </tr>
+                <tr>
+                    <td><strong>Number of Instances:</strong></td>
+                    <td>500,000 ~ 100,000,000 (4 versions)</td>
+                </tr>
+                <tr>
+                    <td><strong>Number of Attributes:</strong></td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td><strong>Attribute Characteristics:</strong></td>
+                    <td>Integer, Real, Categorical</td>
+                </tr>
+                <tr>
+                    <td><strong>Associated Tasks:</strong></td>
+                    <td>Classification, Regression, Clustering</td>
+                </tr>
+                <tr>
+                    <td><strong>Missing Values?</strong></td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td><strong>Area:</strong></td>
+                    <td>Healthcare, Sports Science</td>
+                </tr>
+                <tr>
+                    <td><strong>Date Donated:</strong></td>
+                    <td>2025-02-03</td>
+                </tr>
+            </table>
+
+            <h3>Available Versions</h3>
+            <table>
+                <tr>
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Instances</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>foot_pressure_demo.csv</td>
+                    <td>~60 MB</td>
+                    <td>500,000</td>
+                    <td>Demonstration / Quick Analysis</td>
+                </tr>
+                <tr>
+                    <td>foot_pressure_practice.csv</td>
+                    <td>~600 MB</td>
+                    <td>5,000,000</td>
+                    <td>Practice / Student Assignments</td>
+                </tr>
+                <tr>
+                    <td>foot_pressure_full.csv</td>
+                    <td>~2.4 GB</td>
+                    <td>20,000,000</td>
+                    <td>Full Analysis / Research</td>
+                </tr>
+                <tr>
+                    <td>foot_pressure_extended.csv</td>
+                    <td>~12 GB</td>
+                    <td>100,000,000</td>
+                    <td>Big Data Processing / Scalability Testing</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>2. Source</h2>
+            <p><strong>Creator:</strong> AI-Tron (에이아이트론)</p>
+            <p><strong>Contact:</strong> 이호준 대표, 장영민 이사</p>
+            <p><strong>Institution:</strong> 대구대학교 데이터 분석 실습</p>
+
+            <div class="highlight">
+                <strong>Note:</strong> This is a synthetic dataset generated to simulate real-world foot pressure measurements from smart exercise mats. The data patterns are designed to support various statistical analyses and machine learning tasks while maintaining realistic distributions and correlations.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. Attribute Information</h2>
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Attribute</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Values/Range</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>record_id</td>
+                    <td>Integer</td>
+                    <td>Unique record identifier</td>
+                    <td>0 ~ N</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>user_id</td>
+                    <td>Integer</td>
+                    <td>User identifier</td>
+                    <td>1 ~ 100,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>session_id</td>
+                    <td>Integer</td>
+                    <td>Exercise session identifier</td>
+                    <td>1 ~ N</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>timestamp</td>
+                    <td>Datetime</td>
+                    <td>Measurement timestamp</td>
+                    <td>2024-01-01 ~ 2024-12-31</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>condition</td>
+                    <td>Categorical</td>
+                    <td>Exercise condition</td>
+                    <td>before, after</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>left_pressure</td>
+                    <td>Float</td>
+                    <td>Left foot pressure (gf/cm²)</td>
+                    <td>400 ~ 600</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>right_pressure</td>
+                    <td>Float</td>
+                    <td>Right foot pressure (gf/cm²)</td>
+                    <td>400 ~ 600</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>balance_ratio</td>
+                    <td>Float</td>
+                    <td>Left/Right pressure ratio (1.0 = perfect balance)</td>
+                    <td>0.75 ~ 1.25</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>step_count</td>
+                    <td>Integer</td>
+                    <td>Number of steps in session</td>
+                    <td>30 ~ 200</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>grade</td>
+                    <td>Categorical</td>
+                    <td>Exercise performance grade</td>
+                    <td>A, B, C, D</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>age_group</td>
+                    <td>Categorical</td>
+                    <td>Age group</td>
+                    <td>10s, 20s, 30s, 40s, 50s+</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>gender</td>
+                    <td>Categorical</td>
+                    <td>Gender</td>
+                    <td>M, F</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>exercise_type</td>
+                    <td>Categorical</td>
+                    <td>Type of exercise</td>
+                    <td>걷기, 달리기, 점프, 스텝</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>bmi_category</td>
+                    <td>Categorical</td>
+                    <td>BMI category</td>
+                    <td>저체중, 정상, 과체중, 비만</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>injury_history</td>
+                    <td>Boolean</td>
+                    <td>Previous injury history</td>
+                    <td>True, False</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>season</td>
+                    <td>Categorical</td>
+                    <td>Season of measurement</td>
+                    <td>봄, 여름, 가을, 겨울</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>time_of_day</td>
+                    <td>Categorical</td>
+                    <td>Time of day</td>
+                    <td>아침, 오후, 저녁</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>device_type</td>
+                    <td>Categorical</td>
+                    <td>Smart mat device type</td>
+                    <td>매트A, 매트B, 매트C</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>exercise_frequency</td>
+                    <td>Categorical</td>
+                    <td>Exercise frequency</td>
+                    <td>주1회, 주3회, 매일</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>4. Analysis Scenarios</h2>
+            <p>This dataset is designed to support the following statistical analysis scenarios:</p>
+
+            <table>
+                <tr>
+                    <th>#</th>
+                    <th>Scenario</th>
+                    <th>Analysis Type</th>
+                    <th>Expected Finding</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Before/After Balance Change</td>
+                    <td>Paired t-test</td>
+                    <td>Significant improvement after exercise</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Age Group Balance Comparison</td>
+                    <td>ANOVA</td>
+                    <td>20s-30s show best balance</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Gender Pressure Difference</td>
+                    <td>Independent t-test</td>
+                    <td>Males show slightly higher pressure</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Exercise Type Effect</td>
+                    <td>ANOVA + Post-hoc</td>
+                    <td>Jump exercise most effective</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>BMI-Balance Correlation</td>
+                    <td>Correlation Analysis</td>
+                    <td>Higher BMI correlates with lower balance</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Injury History Impact</td>
+                    <td>Independent t-test</td>
+                    <td>Injured users show lower balance</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Seasonal Exercise Effect</td>
+                    <td>ANOVA</td>
+                    <td>Summer most effective</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Time of Day Pattern</td>
+                    <td>ANOVA</td>
+                    <td>Afternoon optimal</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Device Type Comparison</td>
+                    <td>ANOVA</td>
+                    <td>No significant difference (control)</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Frequency-Grade Relationship</td>
+                    <td>Chi-square Test</td>
+                    <td>Higher frequency → higher A-grade ratio</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Age × Gender Interaction</td>
+                    <td>Two-way ANOVA</td>
+                    <td>Interaction effect present</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Time-Series Improvement</td>
+                    <td>Time Series Analysis</td>
+                    <td>Stabilization after 4 weeks</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>5. Usage Example</h2>
+            <div class="code">
+<pre>
+import pandas as pd
+
+# Load dataset
+df = pd.read_csv('foot_pressure_demo.csv')
+
+# Basic exploration
+print(df.info())
+print(df.describe())
+
+# Scenario 1: Paired t-test (Before/After)
+from scipy.stats import ttest_rel
+
+df_wide = df.pivot(index='user_id', columns='condition', values='balance_ratio')
+t_stat, p_value = ttest_rel(
+    abs(df_wide['before'] - 1.0),
+    abs(df_wide['after'] - 1.0)
+)
+print(f"Paired t-test: t={t_stat:.4f}, p={p_value:.6f}")
+
+# Scenario 4: ANOVA (Exercise Type)
+from scipy.stats import f_oneway
+
+groups = [group['balance_ratio'] for name, group in df.groupby('exercise_type')]
+f_stat, p_value = f_oneway(*groups)
+print(f"ANOVA (Exercise Type): F={f_stat:.4f}, p={p_value:.6f}")
+</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>6. Data Quality Notes</h2>
+            <ul>
+                <li><strong>No Missing Values:</strong> All records are complete</li>
+                <li><strong>Realistic Distributions:</strong> Attribute values follow realistic distributions based on domain knowledge</li>
+                <li><strong>Built-in Patterns:</strong> Statistical patterns are intentionally embedded for educational purposes</li>
+                <li><strong>Reproducible:</strong> Data generation uses fixed random seed (42) for reproducibility</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Educational Purpose:</strong> This synthetic dataset is created for teaching data analysis and statistical methods. While the patterns are realistic, they should not be used for actual medical or healthcare decisions.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>7. Relevant Keywords</h2>
+            <p>
+                <span class="tag">Foot Pressure</span>
+                <span class="tag">Smart Mat</span>
+                <span class="tag">Healthcare</span>
+                <span class="tag">Sports Science</span>
+                <span class="tag">Balance Analysis</span>
+                <span class="tag">Statistical Testing</span>
+                <span class="tag">t-test</span>
+                <span class="tag">ANOVA</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Time Series</span>
+                <span class="tag">Rehabilitation</span>
+                <span class="tag">Exercise Science</span>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>8. Citation</h2>
+            <div class="code">
+<pre>
+@dataset{foot_pressure_2025,
+  title     = {Smart Mat Foot Pressure Dataset},
+  author    = {AI-Tron and Daegu University},
+  year      = {2025},
+  publisher = {AI-Tron},
+  note      = {Synthetic dataset for educational purposes},
+  url       = {https://github.com/ai-tron/foot-pressure-dataset}
+}
+</pre>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <strong>AI-Tron (에이아이트론)</strong><br>
+                Smart Healthcare Solutions<br>
+                Created for Daegu University Data Analysis Workshop<br>
+                February 2025
+            </p>
+        </div>
+    </div>
+</body>
+</html>
